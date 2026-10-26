@@ -1,0 +1,56 @@
+---
+layout: default
+title: "Phone Number Tools: E.164 Converter, Bulk Network Sorter, Vanity Number Scorer | 093333"
+description: "Free phone number tools for the Philippines, Vietnam and Taiwan: convert to E.164 and WhatsApp links, sort a contact list by network and export CSV, and score how memorable a number is."
+---
+
+<section class="page-hero"><div class="wrap">
+<div class="crumbs"><a href="/index.html">Home</a> / Tools</div>
+<span class="eyebrow">Toolkit</span><h1>Number tools that save real time</h1>
+<p class="lead">Built for marketers, developers, call-centre teams and anyone who handles lists of mobile numbers. Everything runs locally in your browser.</p>
+</div></section>
+
+<section><div class="wrap">
+<div class="tabs" data-group="tools" data-hash role="tablist">
+<button class="on" data-pane="fmt" role="tab" aria-selected="true">🔁 Format converter</button><button data-pane="bulk" role="tab">🗂️ Bulk network sorter</button><button data-pane="pattern" role="tab">✨ Vanity scorer</button><button data-pane="dial" role="tab">🌏 Dialing guide</button>
+</div>
+
+<div class="pane on" id="fmt" data-group="tools"><div class="grid g2">
+<div class="form-card"><div class="field"><label for="fmtIn">Mobile number</label><input id="fmtIn" inputmode="tel" value="09171234567"></div><p class="muted">Accepts local (0917…), international (+63…, +84…, +886…) or numbers with spaces and dashes.</p></div>
+<div id="fmtOut"></div></div></div>
+
+<div class="pane" id="bulk" data-group="tools"><div class="grid g2">
+<div class="form-card"><label for="bulkIn" style="font-weight:600">Paste numbers (one per line, or comma-separated)</label>
+<textarea id="bulkIn" class="code" style="margin-top:8px">09171234567
+0918 765 4321
++639331234567
+09931234567
+0933123456
+0981234567
++84 38 123 4567
+12345</textarea>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><button class="btn btn-primary" id="bulkGo" type="button">Sort by network</button><a class="btn btn-ghost" id="bulkDl" download="093333-sorted-numbers.csv" style="display:none">Download CSV</a></div>
+<p class="muted" id="bulkCount" style="margin-top:10px"></p></div>
+<div><h3>Result</h3><div class="out-grid" id="bulkOut"><p class="muted">Click “Sort by network”.</p></div>
+<div class="callout" style="margin-top:16px">Use the split to choose the cheapest on-net SMS route or load promo per group — then confirm current network status with your provider, since portability moves numbers between carriers.</div></div>
+</div></div>
+
+<div class="pane" id="pattern" data-group="tools"><div class="grid g2">
+<div class="form-card"><div class="field"><label for="patIn">Number or numeric domain</label><input id="patIn" inputmode="numeric" value="093333"></div>
+<p class="muted">Scores memorability: repeated runs (3333), quad endings, ABAB/AABB, sequences, palindromes, digit variety and East-Asian lucky-digit preferences. Useful when choosing a business hotline, a vanity SIM or a numeric domain.</p></div>
+<div id="patOut"></div></div></div>
+
+<div class="pane" id="dial" data-group="tools">
+<div class="tbl-wrap"><table><thead><tr><th>Country</th><th>Code</th><th>Mobile format (local)</th><th>International</th><th>Exit code</th><th>Scam hotline</th></tr></thead><tbody>
+<tr><td>🇵🇭 Philippines</td><td class="mono">+63</td><td class="mono">09XX XXX XXXX</td><td class="mono">+63 9XX XXX XXXX</td><td class="mono">00</td><td>1326 (CICC)</td></tr>
+<tr><td>🇻🇳 Vietnam</td><td class="mono">+84</td><td class="mono">0XX XXX XXXX</td><td class="mono">+84 XX XXX XXXX</td><td class="mono">00</td><td>156 / 5656</td></tr>
+<tr><td>🇹🇼 Taiwan</td><td class="mono">+886</td><td class="mono">09XX-XXX-XXX</td><td class="mono">+886 9XX XXX XXX</td><td class="mono">002</td><td>165</td></tr>
+</tbody></table></div>
+<p class="muted" style="margin-top:10px">Drop the leading 0 after any country code. From the US or Canada dial 011 first; from most other countries dial 00, or simply use + on a mobile.</p>
+</div>
+</div></section>
+
+<section class="alt"><div class="wrap band">
+<div><h2>Need this at scale?</h2><p>If you validate thousands of numbers a day, you need an HLR/number-lookup API with live portability data, not a prefix table. We'll connect you with providers that offer it, plus SMS and OTP delivery.</p></div>
+<div><a class="btn btn-primary" href="/business.html">Get API &amp; SMS quotes</a></div>
+</div></section>

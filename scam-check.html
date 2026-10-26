@@ -1,0 +1,51 @@
+---
+layout: default
+title: "Scam Text Checker — Is This SMS a Scam? Free Analyzer | 093333"
+description: "Paste a suspicious text message and get an instant risk score with the exact red flags: links, OTP requests, fake prizes, job bait, fake deliveries. Runs privately in your browser."
+---
+
+<section class="page-hero"><div class="wrap">
+<div class="crumbs"><a href="/index.html">Home</a> / Scam Text Check</div>
+<span class="eyebrow">Tool</span><h1>Is this text a scam?</h1>
+<p class="lead">Paste the message exactly as you received it. The analyzer checks it against the patterns behind most smishing in the Philippines, Vietnam and beyond — in English, Filipino and Vietnamese keywords. Nothing is uploaded.</p>
+</div></section>
+
+<section><div class="wrap grid g2">
+<div class="form-card">
+<label for="smsIn" style="font-weight:600">Message text</label>
+<textarea id="smsIn" class="code" style="margin-top:8px;min-height:190px;font-family:var(--sans)" placeholder="Paste the SMS, Viber, WhatsApp or Messenger message here…"></textarea>
+<p class="muted" style="margin:10px 0 6px">Try a sample:</p>
+<div class="chips">
+<button class="chip" data-sample="Your GCash account will be SUSPENDED today. Verify your account immediately: gcash-verify-ph.top/login">E-wallet</button>
+<button class="chip" data-sample="Hi! We are hiring part-time. Earn 800-3000 daily by liking videos. Commission paid same day. WhatsApp us now.">Job offer</button>
+<button class="chip" data-sample="LBC: Your parcel cannot be delivered due to incomplete address. Pay the redelivery fee of P35 here: bit.ly/3xParcel">Delivery</button>
+<button class="chip" data-sample="Quý khách đã trúng thưởng xe máy SH. Vui lòng chuyển khoản phí 500.000đ và cung cấp mã OTP để nhận quà.">Vietnamese</button>
+<button class="chip" data-sample="Hi Ana, running 10 mins late. Save me a seat near the window. See you!">Legit</button>
+</div>
+</div>
+<div class="checker"><h3 style="margin-top:0">Result</h3><div id="smsOut" aria-live="polite"></div></div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<div class="sec-head"><div><span class="eyebrow">Where to report</span><h2>Official channels that act on reports</h2></div><a class="btn btn-ghost btn-sm" href="/report.html">Also report it here →</a></div>
+<div class="grid g3">
+<div class="card"><h3>🇵🇭 Philippines</h3><ul class="list-check"><li>Call or text <b>1326</b> — CICC National Anti-Scam Hotline (24/7)</li><li>Use <b>eReport</b> in the eGov app to get the number blocked</li><li>Tell your bank or e-wallet at once if money moved</li></ul></div>
+<div class="card"><h3>🇻🇳 Vietnam</h3><ul class="list-check"><li>Spam text: <span class="mono">S [number] [content]</span> → 156 or 5656</li><li>Spam call: <span class="mono">V [number] [content]</span> → 156 or 5656</li><li>Scam call: <span class="mono">LD [number] [content]</span> → 156, or call 156</li></ul></div>
+<div class="card"><h3>🇹🇼 Taiwan &amp; elsewhere</h3><ul class="list-check"><li>Taiwan: call <b>165</b> anti-fraud hotline</li><li>US: reportfraud.ftc.gov · forward texts to 7726 (SPAM)</li><li>UK: forward scam texts to 7726</li></ul></div>
+</div>
+</div></section>
+
+<section><div class="wrap article">
+<h2>How the analyzer scores a message</h2>
+<p>Each rule represents a tactic that shows up again and again in scam reports. The score is additive and capped at 100: a message with a link, a deadline and a request for a code will score high even if it looks professional. A low score is not a guarantee — it means none of the common markers appeared.</p>
+<div class="tbl-wrap"><table><thead><tr><th>Signal</th><th>Weight</th><th>Why it matters</th></tr></thead><tbody>
+<tr><td>Link in the message</td><td class="mono">+30</td><td>The strongest single marker. Philippine authorities summarize their advice as: if there is a link, treat it as a scam.</td></tr>
+<tr><td>Asks for OTP / PIN</td><td class="mono">+25</td><td>No real bank, wallet or telco ever needs your one-time code.</td></tr>
+<tr><td>Prize / reward</td><td class="mono">+15</td><td>You cannot win a raffle you did not join.</td></tr>
+<tr><td>Job or investment bait</td><td class="mono">+15</td><td>“Like videos for ₱3,000 a day” and guaranteed-return crypto are top scam categories.</td></tr>
+<tr><td>Deadline or threat</td><td class="mono">+12</td><td>Urgency is engineered to stop you from verifying.</td></tr>
+<tr><td>Payment / fee / delivery story</td><td class="mono">+10 each</td><td>Small “fees” are the hook for card theft.</td></tr>
+</tbody></table></div>
+<div class="callout">Scammers now inject texts into genuine-looking brand threads using illegal cell-site simulators, so even a message that appears under your bank's name can be fake. Always open the official app directly instead of tapping a link.</div>
+<p><a href="/guides/how-to-spot-text-scams.html">Read the full guide: How to spot a scam text in 10 seconds →</a></p>
+</div></section>
