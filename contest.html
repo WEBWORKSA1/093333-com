@@ -1,0 +1,58 @@
+---
+layout: default
+title: "Scam Spotter Challenge — Monthly Quiz & Prize Draw | 093333"
+description: "Test yourself on 8 real-style messages. Spot the scams, learn the red flags and enter the monthly Scam Spotter prize draw. Free to enter."
+---
+
+<section class="page-hero"><div class="wrap">
+<div class="crumbs"><a href="/index.html">Home</a> / Contest</div>
+<span class="eyebrow">Monthly challenge</span><h1>Scam Spotter Challenge</h1>
+<p class="lead">Eight messages. Scam or legit? Finish the quiz, then enter the monthly draw. Entrants who score 6/8 or better qualify for the main prize; everyone who enters qualifies for the runner-up draw.</p>
+<p class="mono" style="color:var(--sig);font-size:1.1rem">This round closes in <span id="contestCd">—</span></p>
+</div></section>
+
+<section><div class="wrap grid g2" style="align-items:start">
+<div class="checker" id="quiz">
+<div style="display:flex;justify-content:space-between;align-items:center"><span class="tag info">QUESTION</span><span class="mono" id="quizProg">1 / 8</span></div>
+<div class="quiz-body">
+<div class="quiz-q" data-a="s"><div class="sms"><small>+63 9•• ••• 4410</small>BDO ALERT: Your account is on hold. Verify within 2 hours to avoid permanent lock: bdo-secure-verify.online</div><button class="quiz-opt" data-k="s">🚩 Scam</button><button class="quiz-opt" data-k="l">✅ Legit</button><p class="explain muted" style="display:none">Bank alerts never come from regular 09 numbers and never contain links. Deadline + link + lookalike domain.</p></div>
+<div class="quiz-q" data-a="l"><div class="sms"><small>Your bank's registered sender name</small>You used your card ending 4411 for PHP 1,250.00 at a grocery on 12-Oct. If you did not make this purchase, call the number on the back of your card.</div><button class="quiz-opt" data-k="s">🚩 Scam</button><button class="quiz-opt" data-k="l">✅ Legit</button><p class="explain muted" style="display:none">No link, no code request, and it tells you to use the number on your own card. That is how real alerts behave.</p></div>
+<div class="quiz-q" data-a="s"><div class="sms"><small>+63 9•• ••• 7720</small>Hello! I'm Jessa from a hiring team. Earn ₱1,500–₱5,000/day by liking YouTube videos. Interested? Reply YES.</div><button class="quiz-opt" data-k="s">🚩 Scam</button><button class="quiz-opt" data-k="l">✅ Legit</button><p class="explain muted" style="display:none">Task scams start with small real payouts, then demand “deposits” to unlock bigger tasks.</p></div>
+<div class="quiz-q" data-a="s"><div class="sms"><small>0933 ••• •••</small>Chúc mừng! Số điện thoại của bạn trúng thưởng iPhone. Nhấn vào link và nhập mã OTP để nhận quà.</div><button class="quiz-opt" data-k="s">🚩 Scam</button><button class="quiz-opt" data-k="l">✅ Legit</button><p class="explain muted" style="display:none">“You won an iPhone — click and enter the OTP.” Prize + link + OTP request: three red flags in Vietnamese.</p></div>
+<div class="quiz-q" data-a="l"><div class="sms"><small>Mom</small>Anak, I'm at the market. Do we still have rice at home? Text me back.</div><button class="quiz-opt" data-k="s">🚩 Scam</button><button class="quiz-opt" data-k="l">✅ Legit</button><p class="explain muted" style="display:none">Saved contact, no link, no money, no urgency. (If “Mom” texts from a new number asking for money — call her old number first.)</p></div>
+<div class="quiz-q" data-a="s"><div class="sms"><small>+63 9•• ••• 0198</small>Your parcel is held at our hub due to unpaid customs fee of ₱49. Pay now to avoid return: bit.ly/•••••</div><button class="quiz-opt" data-k="s">🚩 Scam</button><button class="quiz-opt" data-k="l">✅ Legit</button><p class="explain muted" style="display:none">Tiny fee + short link = card-harvesting page. Check orders inside the official shopping or courier app.</p></div>
+<div class="quiz-q" data-a="s"><div class="sms"><small>Unknown</small>Hi, is this Mark? Sorry, wrong number 😊 You seem nice though — where are you from?</div><button class="quiz-opt" data-k="s">🚩 Scam</button><button class="quiz-opt" data-k="l">✅ Legit</button><p class="explain muted" style="display:none">The classic opener for romance and “pig-butchering” investment scams. Don't continue the chat.</p></div>
+<div class="quiz-q" data-a="l"><div class="sms"><small>Your telco's official sender name</small>Your 5G data promo has been successfully registered. Valid for 7 days. To check your balance, open the official app.</div><button class="quiz-opt" data-k="s">🚩 Scam</button><button class="quiz-opt" data-k="l">✅ Legit</button><p class="explain muted" style="display:none">A confirmation of something you did, from the official sender, pointing you to the app — not a link. Legit.</p></div>
+</div>
+<div id="quizResult" style="display:none;text-align:center;padding:20px 0"><p class="muted">Your score</p><div class="score" id="quizScore">0 / 8</div><p style="margin-top:12px">Now enter the draw below — your score is filled in automatically.</p><a class="btn btn-primary" href="#enter">Enter the draw</a></div>
+</div>
+
+<div>
+<div class="card"><h3>🏆 This month's prizes</h3>
+<ul class="list-check"><li><b>Grand prize:</b> ₱5,000 (or local equivalent) e-gift card — drawn from entrants scoring 6/8+</li><li><b>3 runner-ups:</b> ₱1,000 mobile load / top-up each — drawn from all entrants</li><li><b>Best tip:</b> ₱1,000 for the most useful scam-spotting tip submitted</li></ul>
+<p class="muted">Prizes are funded by supporters and sponsors. Want your brand on the prize? <a href="/advertise.html">Sponsor a round</a>.</p></div>
+<div class="form-card" id="enter" style="margin-top:18px"><h3 style="margin-top:0">Enter the draw</h3>
+<form class="js-form" data-subject="Contest entry" data-ok="You're in! Winners are announced on this page and contacted by email in the first week of next month.">
+<div class="row"><div class="field"><label for="cName">Name *</label><input id="cName" name="name" required autocomplete="name"></div><div class="field"><label for="cEmail">Email *</label><input id="cEmail" name="email" type="email" required autocomplete="email"></div></div>
+<div class="row"><div class="field"><label for="cCountry">Country *</label><select id="cCountry" name="country" required><option value="">Choose…</option><option>Philippines</option><option>Vietnam</option><option>Taiwan</option><option>Other</option></select></div><div class="field"><label for="entryScore">Quiz score</label><input id="entryScore" name="score" readonly placeholder="Finish the quiz"></div></div>
+<div class="field"><label for="cTip">Your best scam-spotting tip (optional — eligible for Best Tip)</label><textarea id="cTip" name="tip" style="min-height:80px"></textarea></div>
+<input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="field"><label class="check"><input type="checkbox" name="age18" value="yes" required> <span>I am 18 or older and accept the contest rules below.</span></label></div>
+<div class="field"><label class="check"><input type="checkbox" name="newsletter" value="yes"> <span>Also send me the weekly scam alert (optional).</span></label></div>
+<button class="btn btn-primary" type="submit">Submit entry</button><div class="form-msg" role="status"></div>
+</form></div>
+</div>
+</div></section>
+
+<section class="alt"><div class="wrap article">
+<h2>Official rules (summary)</h2>
+<ol>
+<li>Free to enter; no purchase necessary. One entry per person per monthly round.</li>
+<li>Open to individuals aged 18+ where such contests are lawful. Void where prohibited.</li>
+<li>Each round closes at the end of the calendar month (23:59, UTC+8). Winners are drawn at random from eligible entries within 7 days and contacted by email; unclaimed prizes after 14 days are redrawn.</li>
+<li>Prizes are non-transferable and may be substituted with equivalent value. Taxes, if any, are the winner's responsibility.</li>
+<li>Entries with false information, duplicates or automated submissions are disqualified.</li>
+<li>Personal data is used only to run the contest and, if you opt in, the newsletter. See the <a href="/privacy.html">Privacy Policy</a>.</li>
+<li>Organized by 093333.com. This contest is not sponsored, endorsed or administered by Google, YouTube, any telecom operator or any bank named on this site.</li>
+</ol>
+</div></section>
