@@ -1,0 +1,48 @@
+---
+layout: default
+title: "Philippine Mobile Prefixes Explained (Globe, Smart, Sun, DITO) — 2026 Guide | 093333"
+description: "How 09XX mobile prefixes work in the Philippines, the full Globe, Smart, Sun and DITO lists, why number portability changed the rules, and how to use prefixes safely."
+---
+
+<section class="page-hero"><div class="wrap">
+<div class="crumbs"><a href="/index.html">Home</a> / <a href="/guides/index.html">Guides</a> / Philippine prefixes</div>
+<h1>Philippine mobile prefixes, explained</h1>
+<p class="meta">Updated October 2026 · 7-minute read</p>
+</div></section>
+
+<section><div class="wrap layout-side"><article class="article">
+<div class="toc"><b>On this page</b><ol><li><a href="#structure">How a PH mobile number is built</a></li><li><a href="#networks">The networks behind the prefixes</a></li><li><a href="#lists">Prefix lists by network</a></li><li><a href="#mnp">Portability: why prefixes are now hints</a></li><li><a href="#use">Practical uses (and limits)</a></li></ol></div>
+
+<h2 id="structure">How a Philippine mobile number is built</h2>
+<p>Every Philippine mobile number has 11 digits when written locally: <span class="mono">0</span> (the domestic trunk prefix), then a three-digit network code, then a seven-digit subscriber number. Writers usually group it as <span class="mono">09XX XXX XXXX</span>. The first four digits — for example <span class="mono">0917</span> or <span class="mono">0933</span> — are what people call the “prefix”.</p>
+<p>Internationally you drop the leading zero and add the country code <span class="mono">+63</span>, so <span class="mono">0917 123 4567</span> becomes <span class="mono">+63 917 123 4567</span> (or <span class="mono">+639171234567</span> without spaces, the E.164 format that apps and SMS gateways expect). A newer range starting <span class="mono">08</span> also exists: <span class="mono">0813</span>, <span class="mono">0817</span> and DITO's <span class="mono">0895–0898</span>.</p>
+
+<h2 id="networks">The networks behind the prefixes</h2>
+<p>Three mobile network operators run their own infrastructure in the Philippines: <b>Globe Telecom</b>, <b>Smart Communications</b> (a PLDT subsidiary) and <b>DITO Telecommunity</b>, which launched commercially in March 2021. Several consumer brands sit on top of them:</p>
+<ul><li><b>TM</b> and <b>GOMO</b> run on Globe.</li><li><b>TNT</b> (Talk 'N Text) and <b>Sun Cellular</b> run on Smart. Sun was a separate operator until it was absorbed into the Smart group, but its prefixes are still widely called “Sun numbers”.</li><li>Smaller labels such as Cherry Prepaid have used Globe's network.</li></ul>
+
+<h2 id="lists">Prefix lists by network</h2>
+<p>These are the original allocations most commonly cited in public lists. Use the <a href="/checker.html#ph">searchable prefix directory</a> for the full table with international formats.</p>
+<div class="tbl-wrap"><table><thead><tr><th>Network</th><th>Prefixes</th></tr></thead><tbody>
+<tr><td>Globe / TM</td><td class="mono">0817, 0904–0906, 0915–0917, 0926, 0927, 0935–0937, 0945, 0953–0956, 0965–0967, 0975–0979, 0995–0997</td></tr>
+<tr><td>Smart / TNT</td><td class="mono">0813, 0907–0914, 0918–0921, 0928–0930, 0938, 0939, 0946–0951, 0961, 0963, 0968–0970, 0981, 0989, 0998, 0999</td></tr>
+<tr><td>Sun (Smart group)</td><td class="mono">0922–0925, 0931–0934, 0940–0944, 0973, 0974</td></tr>
+<tr><td>DITO</td><td class="mono">0895–0898, 0991–0994</td></tr>
+</tbody></table></div>
+<div class="callout">Some older lists place <span class="mono">0992</span> under Smart or <span class="mono">0994</span> under Globe. DITO publicly announced 0991–0994 and 0895–0898 as its reserved prefixes before launch, so those are the allocations we use.</div>
+<p><b>So what is 0933?</b> It is a Sun Cellular prefix, part of the Smart group — which makes this site's name, <span class="mono">093333</span>, look like the start of a Sun number in the Philippines. (In Vietnam the same digits point to MobiFone; see the <a href="/guides/vietnam-093-mobifone.html">Vietnam guide</a>.)</p>
+
+<h2 id="mnp">Portability: why prefixes are now hints, not facts</h2>
+<p>The Mobile Number Portability Act (Republic Act 11202) lets subscribers move between Globe, Smart and DITO without changing their number. A <span class="mono">0917</span> number that started on Globe may be on DITO today. For individuals the impact is small — most promos and pricing are now network-neutral — but for businesses it matters: routing SMS by prefix alone can send traffic down a more expensive or less reliable path. High-volume senders use a live lookup (often called an HLR or MNP query) before sending.</p>
+
+<h2 id="use">Practical uses (and limits)</h2>
+<ol>
+<li><b>Sanity-check a caller.</b> A “bank” calling from a personal 09 number is a red flag regardless of network. Real institutions use hotlines and registered sender names.</li>
+<li><b>Validate data.</b> A Philippine mobile must be 11 digits starting <span class="mono">09</span> or <span class="mono">08</span> (or <span class="mono">+639</span>/<span class="mono">+638</span> internationally). Anything else is a typo or a fake.</li>
+<li><b>Plan budgets.</b> Group your contact list by original network with the <a href="/tools.html#bulk">bulk sorter</a> to estimate SMS costs.</li>
+</ol>
+<p>What a prefix can never tell you is <i>who</i> owns a number. SIM-registration data is held by the operators under the SIM Registration Act and data-privacy rules; any site claiming to reveal a stranger's name and address from a number should be treated with suspicion.</p>
+<p><a class="btn btn-primary" href="/checker.html">Check a number now</a></p>
+</article>
+<aside class="side"><div class="card"><h3>Quick check</h3><p>Paste any number to see its network and correct format.</p><a class="btn btn-primary btn-sm" href="/checker.html">Number Checker</a><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h3>Report a scam</h3><p>CICC hotline <b>1326</b> · eGov app eReport</p></div></aside>
+</div></section>
