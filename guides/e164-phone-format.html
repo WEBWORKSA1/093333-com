@@ -1,0 +1,59 @@
+---
+layout: default
+title: "E.164 Phone Format for Philippine & Vietnamese Numbers: Developer Guide | 093333"
+description: "How to normalise, validate and store Philippine (+63) and Vietnamese (+84) mobile numbers in E.164 format, with regular expressions, edge cases and storage tips."
+---
+
+<section class="page-hero"><div class="wrap">
+<div class="crumbs"><a href="/index.html">Home</a> / <a href="/guides/index.html">Guides</a> / E.164 guide</div>
+<h1>E.164 for PH &amp; VN numbers: a developer's guide</h1>
+<p class="meta">Updated October 2026 · 7-minute read</p>
+</div></section>
+
+<section><div class="wrap layout-side"><article class="article">
+<p>E.164 is the ITU standard for international telephone numbers: a plus sign, the country code and the national number, with no spaces or punctuation and at most 15 digits. Every serious SMS gateway, CPaaS API and messaging app expects it. Storing numbers any other way guarantees duplicates, failed sends and messy analytics.</p>
+
+<h2>The conversion rule</h2>
+<p>For both the Philippines and Vietnam: strip everything except digits and a leading plus, drop the domestic trunk prefix <span class="mono">0</span>, then prepend the country code.</p>
+<div class="tbl-wrap"><table><thead><tr><th>Input</th><th>E.164</th></tr></thead><tbody>
+<tr><td class="mono">0917 123 4567</td><td class="mono">+639171234567</td></tr>
+<tr><td class="mono">(0917) 123-4567</td><td class="mono">+639171234567</td></tr>
+<tr><td class="mono">63 917 123 4567</td><td class="mono">+639171234567</td></tr>
+<tr><td class="mono">9171234567</td><td class="mono">+639171234567</td></tr>
+<tr><td class="mono">093 312 3456</td><td class="mono">+84933123456</td></tr>
+<tr><td class="mono">0084 93 312 3456</td><td class="mono">+84933123456</td></tr>
+</tbody></table></div>
+
+<h2>Validation patterns</h2>
+<p>These regular expressions validate <i>structure</i> after normalising to E.164. They will not tell you whether a number is in service.</p>
+<pre class="code" style="white-space:pre-wrap;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;font-family:var(--mono);font-size:.88rem;color:var(--ink)">// Philippines mobile: +63 then 9 or 8, then 9 more digits
+/^\+63[89]\d{9}$/
+
+// Vietnam mobile (post-2018): +84 then 3,5,7,8 or 9, then 8 digits
+/^\+84[35789]\d{8}$/
+
+// Taiwan mobile: +886 9 then 8 digits
+/^\+8869\d{8}$/</pre>
+
+<h2>A minimal normaliser (JavaScript)</h2>
+<pre class="code" style="white-space:pre-wrap;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;font-family:var(--mono);font-size:.88rem;color:var(--ink)">function toE164(raw, defaultCC = '63') {
+  let s = String(raw).trim().replace(/[^\d+]/g, '');
+  if (s.startsWith('00')) s = '+' + s.slice(2);
+  if (s.startsWith('+')) return s;
+  if (s.startsWith('0')) return '+' + defaultCC + s.slice(1);
+  if (defaultCC === '63' &amp;&amp; /^9\d{9}$/.test(s)) return '+63' + s;
+  return '+' + s; // assume it already includes a country code
+}</pre>
+
+<h2>Edge cases that bite</h2>
+<ul>
+<li><b>Ambiguous 10-digit 09 numbers.</b> <span class="mono">0933123456</span> is a valid Vietnamese mobile and a valid Taiwanese mobile. Always capture the country explicitly in your form (a country selector defaulting to the user's locale) rather than guessing.</li>
+<li><b>Legacy Vietnamese numbers.</b> 11-digit numbers like <span class="mono">0168…</span> were retired in 2018. Map them using the official conversion table or ask the user to update.</li>
+<li><b>Portability.</b> Don't store “network” as a permanent attribute derived from the prefix. If routing cost matters, run a lookup at send time.</li>
+<li><b>Display vs storage.</b> Store E.164; format for display (<span class="mono">+63 917 123 4567</span>) at render time.</li>
+<li><b>Leading-zero loss.</b> Spreadsheets strip leading zeros. Store numbers as text or in E.164 to avoid it.</li>
+</ul>
+<p>Need to clean a list right now? Use the <a href="/tools.html#bulk">bulk sorter</a> to normalise and export CSV, or the <a href="/tools.html#fmt">format converter</a> for single numbers.</p>
+</article>
+<aside class="side"><div class="card"><h3>At scale?</h3><p>Compare number-lookup and SMS APIs for PH and VN.</p><a class="btn btn-primary btn-sm" href="/business.html">Get quotes</a></div></aside>
+</div></section>
